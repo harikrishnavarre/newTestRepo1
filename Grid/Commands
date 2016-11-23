@@ -1,0 +1,25 @@
+
+Below are the commands to start server and other ports:
+
+This is to start the HUB
+
+java -jar selenium-server-standalone-2.47.1.jar -role hub 
+
+To View the console below is the command:
+
+http://localhost:4444/grid/console
+
+IE
+java -Dwebdriver.ie.driver=E:\Jar\IEDriverServer.exe -jar selenium-server-standalone-2.47.1.jar -role webdriver 
+-hub http://localhost:4444/grid/register -port 5555 -browser browserName=ie
+
+Chrome
+
+java -Dwebdriver.chrome.driver=E:\Jar\chromedriver.exe -jar 
+selenium-server-standalone-2.47.1.jar -role webdriver 
+-hub http://localhost:4444/grid/register -port 5555 -browser browserName=chrome
+
+Firefox
+java -jar selenium-server-standalone-2.47.1.jar 
+-role webdriver -hub http://localhost:4444/grid/register 
+-port 5556 -browser browserName=firefox

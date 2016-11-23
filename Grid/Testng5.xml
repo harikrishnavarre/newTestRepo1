@@ -1,0 +1,25 @@
+<!-- IF you run this test two browsers will open and 
+ two tests will run in two different browsers. 
+ SO this is used for to reduce the time.
+ here Test1 will run in FF and Test2 will run in IE-->
+
+
+<suite name="Selenium TestNG Suite" parallel="tests"
+    thread-count="5">
+
+    <test name="Selenium TestNG - 1">
+        <parameter name="browser" value="firefox" />
+       
+        <classes>
+            <class name="grid.Test4" />
+        </classes>
+    </test>
+    <test name="Selenium TestNG - 2">
+        <parameter name="browser" value="chrome" />
+       
+        <classes>
+            <class name="grid.Test5" />
+        </classes>
+    </test>
+
+</suite>
